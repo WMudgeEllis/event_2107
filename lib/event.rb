@@ -4,7 +4,13 @@ class Event
   def initialize(name)
     @name = name
     @food_trucks = []
+    @date = Date.today
   end
+
+  def date
+    "#{@date.day}/#{@date.month}/#{@date.year}"
+  end
+
 
   def add_food_truck(food_truck)
     @food_trucks << food_truck
